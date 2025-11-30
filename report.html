@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - Street Guards</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles2.css">
+    <link rel="icon" href="./images/logo.svg">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="brand">
+                <a href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                    Street Guards
+                </a>
+            </div>
+            <div class="links">
+                <a href="./index.html">Home</a>
+                <a href="./index.html#map">Map</a>
+                <a href="#" class="active">Report</a>
+                <a href="./tips.html">Safety Tips</a>
+                <a href="./government.html">Government Updates</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="report">
+        <div class="container">
+            <h2>Report a Road Issue</h2>
+            <p>Help improve road safety by reporting issues such as potholes , illegal parking , broken streetlights.
+            </p>
+            <form>
+                <label for="">
+                    Issue Type:
+                </label>
+                <select name="issues">
+                    <option value disabled selected>select an issue</option>
+                    <option value="pothole">pothole</option>
+                    <option value="illegal parking"> Illegal Parking</option>
+                    <option value="broken streetlights">Broken Streetlights</option>
+                    <option value="damaged traffic sign">Damaged Traffic Sign</option>
+                    <option value="Road Blockage">Road Blockage</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>
+                    Location:
+                </label>
+                <input type="text" placeholder="Enter Location or adress">
+            
+                <label>Descreption</label>
+                <textarea placeholder="discribe the issue"></textarea>
+                <label> Upload an Image </label>
+                <input type="file">
+                <button type="submit"> Submit Report</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            &copy; 2025 Street Guards.All Rights Reserved
+        </p>
+    </footer>
+</body>
+
+</html>

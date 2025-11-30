@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #8a7d68;
+    animation: fadeInDown 0.6s ease-in-out;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0px 9px;
+    color: #fff;
+}
+
+.brand a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav .links a {
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+    padding-bottom: 3px;
+}
+
+nav .links a:hover {
+    border-bottom: 1px solid #555;
+    color: #555;
+}
+
+nav a.active {
+    border-bottom: 1px solid #fff;
+}
+
+.report {
+    padding: 60px 0;
+    background-color: #fff;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.report .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.report h2 {
+    animation: fadeInDown 0.6s ease-in-out;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.report > .container > p {
+    animation: fadeInUp 0.6s ease-in-out 0.1s backwards;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 25px;
+    animation: fadeInUp 0.8s ease-in-out 0.2s backwards;
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+form label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+    color: #333;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #F0706F;
+    outline: none;
+    box-shadow: 0 0 8px rgba(240, 112, 111, 0.3);
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form input[type="file"] {
+    border: none;
+    background: none;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #F0706F;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background-color: #da5454;
+    color: #0D0D0D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 112, 111, 0.4);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0px 30px;
+    }
+    
+    nav .links a {
+        margin: 0px 5px;
+        font-size: 14px;
+    }
+    
+    form {
+        max-width: 600px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0px 20px;
+    }
+    
+    nav .container {
+        flex-direction: column;
+        gap: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    nav .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav img {
+        max-width: 35px;
+    }
+    
+    .brand a {
+        font-size: 18px;
+    }
+    
+    .report {
+        padding: 40px 0;
+    }
+    
+    .report h2 {
+        font-size: 24px;
+    }
+    
+    form {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    form label {
+        font-size: 14px;
+    }
+    
+    form input,
+    form select,
+    form textarea {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0px 15px;
+    }
+    
+    nav .links {
+        gap: 5px;
+    }
+    
+    nav .links a {
+        margin: 0px 3px;
+        font-size: 12px;
+        padding-bottom: 2px;
+    }
+    
+    .report {
+        padding: 30px 0;
+    }
+    
+    .report h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .report > .container > p {
+        font-size: 14px;
+    }
+    
+    form {
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+    
+    form label {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    
+    form input,
+    form select,
+    form textarea {
+        padding: 8px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    form textarea {
+        height: 120px;
+    }
+    
+    form button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
